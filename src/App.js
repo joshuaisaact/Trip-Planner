@@ -16,6 +16,11 @@ const initialTrips = [
 
 export default function App() {
   const [trips, setTrips] = useState(initialTrips);
+  const [showAddTrip, setShowAddTrip] = useState(false);
+
+  function handleShowAddTrip() {
+    setShowAddTrip(!showAddTrip);
+  }
 
   function handleAddTrip(trip) {
     setTrips(trips => [...trips, trip])
@@ -24,8 +29,8 @@ export default function App() {
   return (
     <div>
       <TripList trips={trips} />
-      <Button>Add Trip</Button>
-      <FormAddTrip onAddTrip={handleAddTrip} />
+      <Button onClick={handleShowAddTrip}>{showAddTrip ? 'Close' : 'Add'}</Button>
+      {showAddTrip && <FormAddTrip onAddTrip={handleAddTrip} />}
     </div>
 
   );
