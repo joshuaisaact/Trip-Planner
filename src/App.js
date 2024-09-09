@@ -5,12 +5,14 @@ const initialTrips = [
   {
     destination: 'France',
     days: 5,
-    totalBudget: 1000
+    totalBudget: 1000,
+    itinerary: []
   },
   {
     destination: 'Italy',
     days: 10,
-    totalBudget: 5000
+    totalBudget: 5000,
+    itinerary: []
   }
 ]
 
@@ -71,7 +73,8 @@ function FormAddTrip({ onAddTrip }) {
       id,
       destination,
       days,
-      totalBudget
+      totalBudget,
+      itinerary: []
     }
 
     onAddTrip(newTrip)
@@ -87,6 +90,7 @@ function FormAddTrip({ onAddTrip }) {
 
     <label>Days</label>
     <input type='range' value={days} min='0' max='14' onChange={(e) => setDays(e.target.value)} />
+    <span>{days} days</span>
 
     <label>Total Budget</label>
     <input type='number' value={totalBudget} onChange={(e) => setTotalBudget(e.target.value)} />
@@ -95,7 +99,14 @@ function FormAddTrip({ onAddTrip }) {
   </form>
 }
 
-function ItineraryList() { }
+function ItineraryList({ trip }) {
+  return (
+    <ul>
+
+    </ul>
+  )
+
+}
 
 function TripSummary() { }
 
