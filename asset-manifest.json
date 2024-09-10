@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/joshuaisaact/Trip-Planner/static/css/main.783a21b6.css",
+    "main.js": "/joshuaisaact/Trip-Planner/static/js/main.410031d9.js",
+    "index.html": "/joshuaisaact/Trip-Planner/index.html",
+    "main.783a21b6.css.map": "/joshuaisaact/Trip-Planner/static/css/main.783a21b6.css.map",
+    "main.410031d9.js.map": "/joshuaisaact/Trip-Planner/static/js/main.410031d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.783a21b6.css",
+    "static/js/main.410031d9.js"
+  ]
+}
