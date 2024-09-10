@@ -2,6 +2,7 @@ import Button from "./Button";
 import FormAddActivity from './FormAddActivity'
 
 export default function ItineraryList({ itinerary, onShowAddActivity, showAddActivity, onAddTripActivity }) {
+
   return (
     <>
       <ul>
@@ -10,14 +11,21 @@ export default function ItineraryList({ itinerary, onShowAddActivity, showAddAct
         ) : (
           itinerary.map((activity, index) => (
             <li key={index}>
-              <strong>{activity.name}</strong> Day: {activity.day} Cost: £{activity.cost}
+              <strong>{activity.name}</strong>
+              <span>{activity.day}</span>
+              <span>£{activity.cost}</span>
             </li>
           ))
         )}
       </ul>
-
       <Button onClick={onShowAddActivity}>{showAddActivity ? 'Close' : 'Add Activity'}</Button>
-      {showAddActivity && <FormAddActivity onAddTripActivity={onAddTripActivity} />}
+
+      <div
+        className={`form-container ${showAddActivity ? 'visible' : 'hidden'}`}
+      >
+        {showAddActivity && <FormAddActivity onAddTripActivity={onAddTripActivity} />}
+      </div>
+
     </>
   );
 

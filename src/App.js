@@ -27,6 +27,17 @@ const initialTrips = [
       { cost: 55, day: "5", name: "Museum Visit" },
       { cost: 250, day: "4", name: "Cooking class" },
     ]
+  },
+  {
+    id: 300,
+    destination: 'Japan',
+    days: 12,
+    totalBudget: 3000,
+    itinerary: [
+      { cost: 35, day: "1", name: "City Tour" },
+      { cost: 55, day: "5", name: "Museum Visit" },
+      { cost: 250, day: "4", name: "Cooking class" },
+    ]
   }
 ]
 
@@ -70,7 +81,7 @@ export default function App() {
   }
 
   return (
-    <>
+    <div className='app'>
       <h1>Trip Planner</h1>
       <div className='app-container'>
 
@@ -103,9 +114,8 @@ export default function App() {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
-function TripSummary() { }
 

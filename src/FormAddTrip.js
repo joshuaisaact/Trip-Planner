@@ -38,6 +38,6 @@ export default function FormAddTrip({ onAddTrip }) {
     <label>Total Budget</label>
     <input type='number' value={totalBudget} onChange={(e) => setTotalBudget(e.target.value)} />
 
-    <Button>Add</Button>
+    <Button>Add Trip</Button>
   </form>;
 }
